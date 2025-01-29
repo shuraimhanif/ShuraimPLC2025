@@ -1,18 +1,18 @@
 module Intro2 where
 -- test Comment
 -- String algebra:
-name = "Alice"
+name = "Shuraim"
 -- "if" has a special syntax but otherwise a typed version of Lisp's "if":
 name2 = if name /= "" then name else "no name"
 
-pname3 = print "Bob"
+pname3 = print "My name is Yusaku"
 
 myprogram = print (1 + m)  -- compiler error: m undefined
-m = 1                      -- unless this line is also present
+m = 145                  -- unless this line is also present
 
 -- sequencing several imperative programs:
 prg1 = do
-  print "hello " 
+  print "you are strong child, but i am beyond strength" 
   print name  -- level of indentation is important
 
 -- the same, but using algebra of imperative programs:
@@ -20,7 +20,7 @@ prg1' = sequence_ [print "hello ", print name]
 
 -- one imperative program passing value to another:
 prg2 = do
-  line <- getLine
+  line <- getLine -- asks for input line
   putStrLn ("you typed: " ++ line)
 
 main =
@@ -35,8 +35,8 @@ main =
 toString value = show value
 
 -- string concatenation:
-greet1 = "hello " ++ name ++ (toString 123)
+greet1 = "hello " ++ name ++ " " ++ (toString 6000)
 -- the same, but with the operator as a function (like Lisp):
 greet2 = (++) "hello " name
 -- concatenating more than 2 strings:
-greet3 = concat ["hello ", name, toString 123]
+greet3 = concat ["hello ", name," ", toString 123]
