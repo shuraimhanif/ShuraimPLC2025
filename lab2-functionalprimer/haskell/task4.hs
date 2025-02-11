@@ -4,7 +4,7 @@ ask prompt =
   putStrLn prompt
   line <- getLine
   if line == ""
-    then ask prompt
+    then ask (prompt ++ "!")
     else if line == "quit" --added an extra stateent that can quit--
       then putStrLn("quitting...")
     else putStrLn ("reversed, you said: " ++ reverse line)
